@@ -1,0 +1,197 @@
+@background: #545c64;
+@border: solid 1px #ebeef5;
+@color: white;
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  &.center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  &.row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    :nth-child(odd) {
+      margin: 2px;
+    }
+
+    :nth-child(even) {
+      margin: 2px;
+    }
+
+    .el-input {
+      font-size: 12px;
+      height: 30px;
+      width: 200px;
+
+      &__inner {
+        color: gray;
+      }
+    }
+
+    .el-input-number {
+      width: 90px;
+    }
+  }
+
+  &.row-center {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: inherit;
+  }
+
+  &.row-side {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+  }
+}
+
+.background {
+  background: @background;
+}
+
+.cell {
+  padding-right: 10px !important;
+
+  .el-image {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.el {
+  &-aside {
+    background: @background;
+    border: @border;
+  }
+
+  &-checkbox-group {
+    border: @border;
+    padding: 10px;
+
+    .el-checkbox {
+      width: 25%;
+    }
+  }
+
+  &-collapse-item__header {
+    i {
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px;
+    }
+  }
+
+  &-container {
+    height: auto;
+    min-height: 100%;
+  }
+
+  &-date-editor--date {
+    width: 130px !important;
+  }
+
+  &-drawer {
+    overflow: auto !important;
+    width: 60% !important;
+
+    &__header {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-footer {
+    height: 20px;
+    text-align: center;
+  }
+
+  &-form-item {
+    align-items: center;
+    display: flex;
+
+    &__label {
+      width: 150px;
+    }
+
+    &__content {
+      margin-right: 20px;
+      width: 100%;
+    }
+  }
+
+  &-header {
+    background: @background;
+    color: @color;
+
+    .el-dropdown {
+      color: @color;
+    }
+  }
+
+  &-main {
+    padding: 5px;
+  }
+
+  &-menu {
+    border-right: none;
+    width: 70px;
+
+    &:not(&--collapse) {
+      width: 300px;
+    }
+  }
+
+  &-table {
+    &__header {
+      th {
+        text-align: center !important;
+      }
+    }
+
+    &__body {
+      td {
+        &.el-table-column--selection {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-tabs__header {
+    margin-bottom: 5px;
+  }
+
+  &-tree {
+    border: @border;
+    width: 100%;
+  }
+}
+
+.hover {
+  cursor: pointer;
+  margin: 5px;
+}
